@@ -6,6 +6,6 @@ RUN cargo build --release
 # Final Image
 FROM gcr.io/distroless/cc-debian12
 
-COPY --from=core-builder /builder/target/release/github-app /
+COPY --from=core-builder /builder/target/release/axum-starter /
 
-CMD ["./github-app"]
+CMD ["./axum-starter"]
